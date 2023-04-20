@@ -15,6 +15,6 @@ O script em si, por sua vez, importa a classe de Node e o Twist para criação d
 
 A função main inicia o controlador e depois destrói o nó.
 
-Em suma, em um terminal, é criado um nó de renderização da tartaruga. Em outro, é criado um nó publicador que, através do ROS2, envia mensagens para o outro nó especificando a velocidade da tartaruga em dado momento. Essa comunicação acontece a cada 10s, segundo o timer criado no nó publicador.
+Em suma, em um terminal, é criado um nó de renderização da tartaruga. Em outro, é criado um nó publicador que, através do ROS2, envia mensagens para o outro nó especificando a velocidade da tartaruga em dado momento. Essa comunicação acontece a cada 10s, segundo o timer criado no nó publicador. Nesse sentido, o nó de controlador age como servidor e o nó do turtlesim age como cliente. Essa comunicação acontece no tópico "turtle1/cmd_vel", na qual o controle é publisher e o turtlesim é subscriber. Logo, é uma comunicação pub-sub.
 
 Link para vídeo de funcionamento: https://youtu.be/gLbJrfWoiFk
